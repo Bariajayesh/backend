@@ -3,20 +3,13 @@
  * database se connect karna
  */
 
+require("dotenv").config()
 
 const app = require("./src/app")
-const mongoose = require("mongoose")
+const dbconnect = require("./src/config/databaseCon")
 
 
 //connect to database
-function dbconnect() {
-    mongoose.connect("mongodb+srv://bjay28892_db_user:jayesh123@cluster0.oaguza3.mongodb.net/")
-
-        .then(() => {
-            console.log("database is connected....moj kar bhai")
-        })
-}
-
 dbconnect()
 
 //server run..
